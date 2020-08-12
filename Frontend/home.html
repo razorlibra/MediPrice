@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/LogoTIS.PNG">
+    <title>MediPrice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+        <a class="navbar-brand" href="#">
+            <img src="src/Logo_sin_fonfo.png" width="80" height="80" alt="" loading="lazy">
+        </a>
+        <a class="navbar-brand" href="#">DIGEMID</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="receta.html">RECETA <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">ACERCA DE NOSOTROS</a>
+            </li>
+            <li class="nav-item logged-in">
+              <a class="nav-link" id="logout" href="index.html">SALIR</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="search-bar">
+      <div class="search-bar-content">
+
+        <p>Ingresa el nombre del medicamento</p>
+        <form class="search-form">
+          <input type="text" class="form-control" placeholder="Ejm: Paracetamol"  aria-describedby="button-addon2">
+          <button class="btn btn-outline-warning " type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="search-filter">
+
+        <div class="filter-group filter-location">
+          <div class="title-filter">Filtro por ubicacion</div>
+          <div class="location-levels">
+            
+            <div class="location-level">
+              <div>Departamento</div>
+              <select class="custom-select">
+                <option selected>Seleccione uno</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+            <div class="location-level">
+              <div>Provincia</div>
+              <select class="custom-select">
+                <option selected>Seleccione uno</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+            <div class="location-level">
+              <div>Distrito</div>
+              <select class="custom-select">
+                <option selected>Seleccione uno</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="filter-group filter-place">
+          <div class="title-filter">Filtro por tipo de establecimiento</div>
+          <div class="place-catgeories">
+            
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="radio-todos" name="tipo-place" class="custom-control-input">
+              <label class="custom-control-label" for="radio-todos">Todos</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="radio-publico" name="tipo-place" class="custom-control-input">
+              <label class="custom-control-label" for="radio-publico">Publico</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="radio-privado" name="tipo-place" class="custom-control-input">
+              <label class="custom-control-label" for="radio-privado">Privado</label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="filter-group filter-botique">
+          <div class="title-filter">Filtro farmacia/botica</div>
+          <div>
+            <input type="email" class="form-control" id="botique" aria-describedby="emailHelp">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <button type="button" class="btn btn-outline-success  btn-block">Aplicar filtros</button>
+        </div>
+
+      </div>
+
+      <div class="search-data">
+
+        <div class="data-header">
+          <table class="table table-custom">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Reg. Sanitario</th>
+                <th scope="col">Sucursal</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="data-items">
+
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header card-custom" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    PARACETAMOL
+                  </button>
+                </h2>
+
+                <div class="link-mapa"> 
+                  <a href="mapa_detalle.html">VER MAPA</a> </div>
+              </div>
+          
+              <div id="itemOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="data-details">
+                  <table class="table table-custom">
+                    <tbody>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>QUIMICA SUIZA SA</td>
+                        <td>S/ 38.71</td>
+                      </tr>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>GLAXOSMITHKLINE</td>
+                        <td>S/ 41.20</td>
+                      </tr>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>BOTICA BOLOGNESI</td>
+                        <td>S/ 0.70</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    ALICAM FORTE
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="itemTwo" class="collapse show" style="display: none;" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="data-details">
+                  <table class="table table-custom">
+                    <tbody>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>QUIMICA SUIZA SA</td>
+                        <td>S/ 20.20</td>
+                      </tr>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>GLAXOSMITHKLINE</td>
+                        <td>S/ 15.20</td>
+                      </tr>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>BOTICA BOLOGNESI</td>
+                        <td>S/ 0.80</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    APROXOL 100
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="itemThree" class="collapse show" style="display: none;" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="data-details">
+                  <table class="table table-custom">
+                    <tbody>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>QUIMICA SUIZA SA</td>
+                        <td>S/ 20.20</td>
+                      </tr>
+                      <tr>
+                        <td>500mg TABLETA</td>
+                        <td>E14831</td>
+                        <td>GLAXOSMITHKLINE</td>
+                        <td>S/ 15.20</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="filter-column">
+        <div class="title-filter">DATOS</div>
+        
+        <div class="columns-data">
+          
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="col1" checked>
+            <label class="custom-control-label" for="col1">Nombre</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="col2">
+            <label class="custom-control-label" for="col2">Nombre Gen.</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="col3">
+            <label class="custom-control-label" for="col3">Fabricante</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="col4" checked>
+            <label class="custom-control-label" for="col4">R. Sanitario</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="col5" checked>
+            <label class="custom-control-label" for="col5">Sucursal</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="col6" checked>
+            <label class="custom-control-label" for="col6">Precio</label>
+          </div>
+
+        </div>
+      </div>
+      
+
+      <!-- Script propio -->
+
+    </div>
+    
+</body>
+</html>
